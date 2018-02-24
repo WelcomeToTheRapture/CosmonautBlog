@@ -6,7 +6,7 @@ from .views import (blog_create, blog_detail,
 urlpatterns = [
     url(r'^$', blog_list),
     url(r'^create/$', blog_create),
-    url(r'^detail/$', blog_detail),
+    url(r'^(?P<id>\d+)/$', blog_detail, name='detail'),
     url(r'^update/$', post_update),
     url(r'^delete/$', post_delete),
 ]
